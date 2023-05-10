@@ -1,0 +1,11 @@
+#include<iomanip>
+#include<iostream>
+using namespace std;
+
+int main(){
+    float pi;
+    pi=22.0/7.0;
+    cout<<"Value of the pi is"<<setprecision(4)<<pi<<endl;
+    cout<<"Value of the pi is"<<fixed<<setprecision(4)<<pi;
+    return 0;
+}
