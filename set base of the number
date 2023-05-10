@@ -1,0 +1,11 @@
+#include<iomanip>
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    cout<<"Value of the number in octal is "<<setbase(8)<<n<<endl;
+    cout<<"Value of the number in hexadecimal is "<<setbase(16)<<n<<endl;
+    return 0;
+}
