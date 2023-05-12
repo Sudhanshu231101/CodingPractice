@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+struct student{
+    int roll;
+    int marks[5];
+    int avg;
+
+    void input(int a,int b, int c, int d, int e, int f){
+        roll=a;
+        marks[0]=b;
+        marks[1]=c;
+        marks[2]=d;
+        marks[3]=e;
+        marks[4]=f;
+    }
+
+    float percentage(){
+        int sum=0;
+        for(int i=0;i<5;i++){
+            sum+=marks[i];
+        }
+        return (sum/5.0);
+    } 
+
+    void print(){
+        cout<<"Details about student having roll no: "<<roll<<endl;
+        for(int i=0;i<5;i++){
+            cout<<"MARKS IN SUBJECT "<<i+1<<" is "<<marks[i]<<endl;
+        }
+        cout<<"FINAL PERCENTAGE IS "<<percentage()<<endl;
+    }
+
+};
+
+int main(){
+
+    student a,b,c;
+    a.input(1,80,88,90,92,98);
+    b.input(2,70,58,98,45,90);
+    c.input(3,80,70,79,79,86);
+
+    a.print();
+    b.print();
+    c.print();
+
+    return 0;
+}
+
