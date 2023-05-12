@@ -1,0 +1,35 @@
+// passing class type parameter to member function
+
+#include<iostream>
+using namespace std;
+
+class Data{
+    private:
+    int a;
+    public:
+    void geta(){
+        cin>>a;
+    }
+    void printa(){
+        cout<<a;
+    }
+    void maxAmongTwo(Data d2){
+        if(a>d2.a){
+            cout<<a<<" is maximum"<<endl;
+        }
+        else if(a<d2.a){
+            cout<<d2.a<<" is maximum"<<endl;
+        }
+        else{
+            cout<<"Both are equal"<<endl;
+        }
+    }
+};
+
+int main(){
+    Data d1,d2;
+    d1.geta();
+    d2.geta();
+    d1.maxAmongTwo(d2);
+    return 0;
+}
