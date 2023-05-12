@@ -1,0 +1,23 @@
+// use of the this pointer in cpp
+
+#include<iostream>
+using namespace std;
+
+class data{
+    private:
+    int a,b;
+    public:
+    void InputAndPrint(int a, int b){
+        this->a=a;
+        this->b=b;
+        cout<<this<<endl;
+        cout<<this->a<<endl;
+        cout<<this->b;
+    }
+};
+
+int main(){
+    data d;
+    d.InputAndPrint(5,10);
+    return 0;
+}
